@@ -1,3 +1,5 @@
+## Documentación del proceso
+
 #### Documentación del proceso
  
  1. CLONACIÓN Y CREACIÓN DEL REPOSITORIO
@@ -30,6 +32,8 @@
 
   - Toca crear el proyecto MkDocs en la rama documentación, desde la carpeta principal **mkdocs new .**. Crea la estructura inicial de MkDocs en mi repo. Ahora aparecen los archivos docs/index.md y mkdocs.yml.
 
+  - En la carpeta docs creamos los archivos comandos.md y proceso.md.
+
   - En el archivo yml, añadimos como los enlaces entre las diferentes páginas para que en mkdocs se reconozcan entre ellos. 
 
   site_name: Documentación de git
@@ -41,3 +45,14 @@
 
 
   - Ejecutamos **mkdocs serve**, comprobamos que funciona bien por web y guardamos los cambios en la rama documentación con **git add docs/ mkdocs.yml**, comprobamos con git status y hacemos commit.
+
+  (apartado 2 de ramas)
+  - Publicamos la rama documentación en GitHub para que también aparezca en el repo remoto con **git push -u origin documentacion** (hasta aquí)
+
+  - Desde la rama documentación, vamos a crear pages, ejecutamos **mkdocs gh-deploy**, hace 3 cosas:
+  1. Construye la página web a partir de los archivos Markdown (index.md, comandos.md...)
+  2. Prepara los archivos resultantes en formato web (HTML, CSS, imágenes...)
+  3. Los publica en GitHub, dentro de una rama llamada gh-pages.
+Es decir, convierte la documentación que yo he creado en una página web y la publica en GitHub Pages. Y en GitHub le indicamos que utilice esa rama para mostrar la página en internet.
+
+Desde la página de GitHub, comprobamos la configuración de pages, settings, build and deployment, source, tiene que salir -deploy from a branch- y abajo -gh-pages y /(root)-. Y arriba rour site is live at https...
