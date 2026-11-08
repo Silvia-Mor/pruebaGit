@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Proceso - Documentación de Git</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Documentación de Git</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../comandos/" class="nav-link">Comandos de Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Proceso</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../comandos/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#documentacion-del-proceso" class="nav-link">Documentación del proceso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="documentacion-del-proceso">Documentación del proceso</h2>
+<h4 id="documentacion-del-proceso_1">Documentación del proceso</h4>
+<ol>
+<li>
+<p>CLONACIÓN Y CREACIÓN DEL REPOSITORIO</p>
+<ul>
+<li>
+<p>Creamos una carpeta y desde vsc hacemos <strong>git init</strong> y <strong>git clone del repositorio del profesor.</strong> </p>
+</li>
+<li>
+<p>En vsc creamos .gitignore, metemos DS_Start y UD01_exam_IAW/, 
+  <strong>git add .gitignore</strong> y <strong>commit</strong> para que esos archivos no nos molesten a la hora de hacer el ejercicio.</p>
+</li>
+</ul>
+<p>Todo lo vamos comprobando con <strong>git status</strong>.</p>
+<ul>
+<li>
+<p>El enunciado pide copiar el enunciado a la carpeta principal con <strong>cp UD02_exam_IAW/UD02_exam.md .</strong>
+  Añadimos y guardamos los cambios <strong>git add .</strong> y <strong>git commit -m ""</strong></p>
+</li>
+<li>
+<p>En vsc en el apartado de git, le damos a la nube con la flecha hacia arriba y seleccionamos github público.
+  (crea el repo remoto de GitHub, conecta mi repo local y sube mi rama main a sus commits).</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="super-importante-para-crear-el-repositorio-remoto"><strong>SÚPER IMPORTANTE PARA CREAR EL REPOSITORIO REMOTO</strong></h3>
+<pre><code>  Nube con flecha hacia arriba, seleccionar public.
+</code></pre>
+<ol>
+<li>
+<p>CREACIÓN Y GESTIÓN DE RAMAS</p>
+<ul>
+<li>Creamos la rama documentación con <strong>git checkout -b documentacion</strong> (la crea y cambia directamente a ella), comprobamos git status.</li>
+<li>Nos gestionamos las ramas con <strong>git branch</strong>.</li>
+</ul>
+</li>
+<li>
+<p>CREACIÓN, GESTIÓN Y PUBLICACIÓN DEL PROJECTO MKDOCS </p>
+</li>
+<li>
+<p>Toca crear el proyecto MkDocs en la rama documentación, desde la carpeta principal <strong>mkdocs new .</strong>. Crea la estructura inicial de MkDocs en mi repo. Ahora aparecen los archivos docs/index.md y mkdocs.yml.</p>
+</li>
+<li>
+<p>En la carpeta docs creamos los archivos comandos.md y proceso.md.</p>
+</li>
+<li>
+<p>En el archivo yml, añadimos como los enlaces entre las diferentes páginas para que en mkdocs se reconozcan entre ellos. </p>
+</li>
+</ol>
+<p>site_name: Documentación de git</p>
+<p>nav:
+    - Inicio: index.md
+    - Comandos de Git: comandos.md
+    - Proceso: proceso.md</p>
+<ul>
+<li>Ejecutamos <strong>mkdocs serve</strong>, comprobamos que funciona bien por web y guardamos los cambios en la rama documentación con <strong>git add docs/ mkdocs.yml</strong>, comprobamos con git status y hacemos commit.</li>
+</ul>
+<p>(apartado 2 de ramas)
+  - Publicamos la rama documentación en GitHub para que también aparezca en el repo remoto con <strong>git push -u origin documentacion</strong></p>
+<ul>
+<li>Desde la rama documentación, vamos a crear pages, ejecutamos <strong>mkdocs gh-deploy</strong>, hace 3 cosas:</li>
+<li>Construye la página web a partir de los archivos Markdown (index.md, comandos.md...)</li>
+<li>Prepara los archivos resultantes en formato web (HTML, CSS, imágenes...)</li>
+<li>Los publica en GitHub, dentro de una rama llamada gh-pages.
+Es decir, convierte la documentación que yo he creado en una página web y la publica en GitHub Pages. Y en GitHub le indicamos que utilice esa rama para mostrar la página en internet.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

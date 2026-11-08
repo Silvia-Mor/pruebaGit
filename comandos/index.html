@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Comandos de Git - Documentación de Git</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Documentación de Git</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Comandos de Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../proceso/" class="nav-link">Proceso</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../proceso/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#comandes-de-git" class="nav-link">Comandes de Git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="comandes-de-git">Comandes de Git</h2>
+<h3 id="crear-i-clonar-repositoris">Crear i clonar repositoris</h3>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git init</code></td>
+<td>Inicialitza un repositori local de Git</td>
+</tr>
+<tr>
+<td><code>git clone ssh://git@github.com/[nom-usuari]/[nom-repo].git</code></td>
+<td>Crea una còpia local d'un repositori remot</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comandes-basiques">Comandes bàsiques</h3>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git status</code></td>
+<td>Comprova l'estat actual</td>
+</tr>
+<tr>
+<td><code>git add [nom-arxiu.txt]</code></td>
+<td>Afegeix un fitxer a la zona de pujar canvis</td>
+</tr>
+<tr>
+<td><code>git add -A</code></td>
+<td>Afegeix tots els fitxers del repositori a la zona de pujar canvis</td>
+</tr>
+<tr>
+<td><code>git commit -m "[missatge]"</code></td>
+<td>Crea un missatge explicatiu dels canvis</td>
+</tr>
+<tr>
+<td><code>git rm -r [nom-arxiu.txt]</code></td>
+<td>Elimina un fitxer (o carpeta)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="branques-i-fusions">Branques i fusions</h3>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git branch</code></td>
+<td>Mostra una llista de les branques que hi ha (l'asterisc assenyala la branca activa)</td>
+</tr>
+<tr>
+<td><code>git branch -a</code></td>
+<td>Mostra una llista de totes les branques (locals i remotes)</td>
+</tr>
+<tr>
+<td><code>git branch [nom]</code></td>
+<td>Crea una nova branca</td>
+</tr>
+<tr>
+<td><code>git branch -d [nom]</code></td>
+<td>Elimina una branca local</td>
+</tr>
+<tr>
+<td><code>git push origin --delete [nom]</code></td>
+<td>Elimina una branca remota</td>
+</tr>
+<tr>
+<td><code>git checkout -b [nom]</code></td>
+<td>Crea una nova branca i ens posicionem</td>
+</tr>
+<tr>
+<td><code>git checkout -b [nom] origin/[nom]</code></td>
+<td>Clona una branca remota i ens posicionem ahí</td>
+</tr>
+<tr>
+<td><code>git branch -m [nom-antic] [nom-nou]</code></td>
+<td>Renomena una branca local</td>
+</tr>
+<tr>
+<td><code>git checkout [nom-branca]</code></td>
+<td>Canvia a una branca concreta</td>
+</tr>
+<tr>
+<td><code>git checkout -</code></td>
+<td>Canvia a la última branca activa</td>
+</tr>
+<tr>
+<td><code>git checkout -- [nom-arxiu]</code></td>
+<td>Descarta canvis en un fitxer</td>
+</tr>
+<tr>
+<td><code>git merge [nom-branca]</code></td>
+<td>Combina una branca amb la branca activa</td>
+</tr>
+<tr>
+<td><code>git merge [nom-branca-origen] [nom-branca-desti]</code></td>
+<td>Combina una branca (branca-origen) amb una branca nova (branca-desti)</td>
+</tr>
+<tr>
+<td><code>git stash</code></td>
+<td>Reverteix els darrers canvis i errors en el directori actual</td>
+</tr>
+<tr>
+<td><code>git stash clear</code></td>
+<td>Reverteix tots els canvis en el directori actual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compartir-i-actualitzar-projectes">Compartir i actualitzar projectes</h3>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git push origin [nom-branca]</code></td>
+<td>Envia una branca local al repositori remot</td>
+</tr>
+<tr>
+<td><code>git push -u origin [nom-branca]</code></td>
+<td>Envia canvis al repositori remot (i et posiciona a la branca concreta)</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Envia canvis al repositori remot (en la branca actual)</td>
+</tr>
+<tr>
+<td><code>git push origin --delete [nom-branca]</code></td>
+<td>Elimina una branca remota</td>
+</tr>
+<tr>
+<td><code>git pull</code></td>
+<td>Actualitza el repositori local a l'últim commit fet</td>
+</tr>
+<tr>
+<td><code>git pull origin [nom-branca]</code></td>
+<td>Porta / agafa tots els canvis d'un dipòsit remot</td>
+</tr>
+<tr>
+<td><code>git remote add origin ssh://git@github.com/[nom-usuari]/[nom-repo].git</code></td>
+<td>Afegeix canvis a un repositori remot</td>
+</tr>
+<tr>
+<td><code>git remote set-url origin ssh://git@github.com/[nom-usuari]/[nom-repo].git</code></td>
+<td>Ubica la branca remota d'un repositori remot mitjançant SSH</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inspeccionar-i-comparar">Inspeccionar i comparar</h3>
+<table>
+<thead>
+<tr>
+<th>Comanda</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git log</code></td>
+<td>Visualitza els canvis</td>
+</tr>
+<tr>
+<td><code>git log --summary</code></td>
+<td>Visualitza els canvis (en detall)</td>
+</tr>
+<tr>
+<td><code>git log --oneline</code></td>
+<td>Visualitza els canvis (resumit)</td>
+</tr>
+<tr>
+<td><code>git diff [branca-origen] [branca-desti]</code></td>
+<td>Vista prèvia dels canvis abans de fer un merge</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
