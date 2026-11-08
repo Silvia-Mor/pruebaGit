@@ -1,0 +1,6 @@
+site_name: Documentación de Git
+
+nav:
+  - Inicio: index.md
+  - Comandos de Git: comandos.md
+  - Proceso: proceso.md
